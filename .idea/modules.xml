@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/C51AlarmProcess.iml" filepath="$PROJECT_DIR$/.idea/modules/C51AlarmProcess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/C51AlarmProcess_main.iml" filepath="$PROJECT_DIR$/.idea/modules/C51AlarmProcess_main.iml" group="C51AlarmProcess" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/C51AlarmProcess_test.iml" filepath="$PROJECT_DIR$/.idea/modules/C51AlarmProcess_test.iml" group="C51AlarmProcess" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedisOps.iml" filepath="$PROJECT_DIR$/.idea/modules/RedisOps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedisOps_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RedisOps_main.iml" group="RedisOps" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RedisOps_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RedisOps_test.iml" group="RedisOps" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SparkJavaWebSocket.iml" filepath="$PROJECT_DIR$/.idea/modules/SparkJavaWebSocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SparkJavaWebSocket_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SparkJavaWebSocket_main.iml" group="SparkJavaWebSocket" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SparkJavaWebSocket_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SparkJavaWebSocket_test.iml" group="SparkJavaWebSocket" />
+    </modules>
+  </component>
+</project>

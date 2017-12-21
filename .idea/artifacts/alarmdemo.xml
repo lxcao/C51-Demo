@@ -1,0 +1,34 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="alarmdemo">
+    <output-path>$PROJECT_DIR$/out/artifacts/alarmdemo</output-path>
+    <root id="archive" name="alarmdemo.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/C51AlarmProcess/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="C51AlarmProcess_main" />
+      <element id="module-output" name="RedisOps_main" />
+      <element id="module-output" name="SparkJavaWebSocket_main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.6.0/a6cb0e70a18dd4f457cd7217222956da6db7ca23/spark-core-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.11/3acb4705652e16236558f0f4f2192cc33c3bd189/commons-codec-1.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-pool2/2.4.2/e5f4f28f19d57716fbc3989d7a357ebf1e454fea/commons-pool2-2.4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-api/9.4.4.v20170414/83ac5e5ccb73da1c1839805e4d7f284422b7535f/websocket-api-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-client/9.4.4.v20170414/efbdd5c98492f4e4e245d9837bb8f9260830c8f7/websocket-client-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.4.4.v20170414/25ba998831e8db6aae2a712217af19effb43d83d/websocket-common-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-server/9.4.4.v20170414/7f454a57892d32f758267a04fe0d60af86e1676e/websocket-server-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-servlet/9.4.4.v20170414/d171094c8f0139b18d97812677c3e203dcb33e59/websocket-servlet-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-client/9.4.4.v20170414/6b3d9dcfa375ee4f4fe6c8bf27ccc403c76b4ae/jetty-client-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/9.4.4.v20170414/a2726de9b40506a9d9a346379785f9c2ce1f7a3e/jetty-http-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.4.4.v20170414/4a1da5a31fbfcdf01e0e4b00a6c5aea96d45801f/jetty-io-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/9.4.4.v20170414/df8cc123fb574607f9c5af471ac1b20d82769563/jetty-security-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.4.4.v20170414/d968aa111177962d476cb665e43fcbc3b9835bdf/jetty-server-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/9.4.4.v20170414/89ea5480d499a95eff0fc10d82244e740e673bd/jetty-servlet-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.4.4.v20170414/7104b56567b0a83eb0554054cd1c90d78f5282cc/jetty-util-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-webapp/9.4.4.v20170414/d2a10c903d5f1894275097d7a0dd7ddb561ec2ec/jetty-webapp-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-xml/9.4.4.v20170414/cec1ca094de1194ed022c2098f5d98640917806c/jetty-xml-9.4.4.v20170414.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.json/json/20170516/949abe1460757b8dc9902c562f83e49675444572/json-20170516.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.13/7fcf30c25b8f4a9379b9dad0d3f487b25272c026/slf4j-api-1.7.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/redis.clients/jedis/2.9.0/292bc9cc26553acd3cccc26f2f95620bf88a04c2/jedis-2.9.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

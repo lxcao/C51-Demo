@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="C51AlarmProcess" external.linked.project.path="$MODULE_DIR$/../../C51AlarmProcess" external.root.project.path="$MODULE_DIR$/../../C51AlarmProcess" external.system.id="GRADLE" external.system.module.group="com.uaes.esw" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../C51AlarmProcess">
+      <excludeFolder url="file://$MODULE_DIR$/../../C51AlarmProcess/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../C51AlarmProcess/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../C51AlarmProcess/out" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

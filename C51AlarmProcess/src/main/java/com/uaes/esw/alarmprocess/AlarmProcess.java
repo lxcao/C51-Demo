@@ -11,8 +11,11 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-//add comments1
+
 public class AlarmProcess {
 
     private static String hash111111Name = "c51:111111:hash";
@@ -20,6 +23,9 @@ public class AlarmProcess {
     private static Jedis jedisClient = RedisOpsV2.getOneJedisFromPool();
 
     private static int sendOutInterval = 3;
+    private static int fuelFillDetectInterval = 1;
+
+    private static CopyOnWriteArrayList<String> fuelFillingDetectList = new CopyOnWriteArrayList<String>();
 
     private static String createRandomID(String value){
         return DigestUtils.md5Hex(value);
@@ -56,9 +62,6 @@ public class AlarmProcess {
         return eoObj;
     }
 
-
-
-
     public static boolean JadgeIncreseArrayWithRecursion(int[] array){
         return JadgeIncreseArrayWithRecursion(array, 0);
     }
@@ -83,7 +86,6 @@ public class AlarmProcess {
         }
     }
 
-
     private static boolean JadgeArrayWithLastOneBiggerThanFirstOne(int[] array){
         if(array[array.length-1] > array[0])
             return true;
@@ -96,7 +98,6 @@ public class AlarmProcess {
                 return false;
         return true;
     }
-
 
     private static boolean JadgeArrayWithAllZeroLastOneNotZero(int[] array){
         int[] tempArray = new int[array.length-1];
@@ -120,7 +121,7 @@ public class AlarmProcess {
     private static long fuelFillBeginTime = 0;
     private static int fuelFillBeginVolume = 0;
     private static int arrayIndex = 0;
-    public static void detectFuelFilling(){
+    private static void detectFuelFilling(){
         while(true){
 
             Set<String> last10msg = jedisClient.zrange(zset111111Name,-10,-1);
@@ -141,18 +142,17 @@ public class AlarmProcess {
                 detectFuelFillingEnd();
             }
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(fuelFillDetectInterval);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
-
     private static long fuleFillEndTime = 0;
     private static int fuelFillEndVolume = 0;
     private static int arrayffIndex = 0;
-    public static void detectFuelFillingEnd(){
+    private static void detectFuelFillingEnd(){
         while(true){
             long nowTime = LocalDateTime.now().atZone(ZoneId.of("Asia/Shanghai"))
                     .toInstant().toEpochMilli();
@@ -176,16 +176,23 @@ public class AlarmProcess {
                 fuelfilled.put("part", "fuel");
                 fuelfilled.put("status", "filled");
                 fuelfilled.put("fuelfilled", fuelFillEndVolume-fuelFillBeginVolume);
+                fuelFillingDetectList.add(fuelfilled.toString());
                 break;
             }
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(fuelFillDetectInterval);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
+    public static void detectFuelFilled(){
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.submit(() -> {
+            detectFuelFilling();
+        });
+    }
 
     private static JSONObject analysisAlarmFromSnapshot(){
 
@@ -247,12 +254,19 @@ public class AlarmProcess {
             fuelWarning.put("part", "fuel");
             fuelWarning.put("status", "low");
             alarmObj.getJSONArray("warning").put(fuelWarning);
-
+        }
+        //fuelfilled
+        if(fuelFillingDetectList.size() != 0)
+        {
+            JSONObject fuelfilledObj = new JSONObject(fuelFillingDetectList.get(1));
+            fuelFillingDetectList.remove(1);
+            alarmObj.getJSONArray("info").put(fuelfilledObj);
         }
         return alarmObj;
     }
 
     private static void sendOutAlarm(){
+        detectFuelFilled();
         while(true){
             JSONObject alarmObj = analysisAlarmFromSnapshot();
             System.out.println(alarmObj);
